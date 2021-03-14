@@ -1,0 +1,37 @@
+[
+    {
+        "type": 1,
+        "title": "Unpackerr",
+        "name": "airsonic",
+        "description": "This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Radarr, Lidarr, Sonarr, and Readarr may import them.",
+        "logo": "https://raw.githubusercontent.com/wiki/davidnewhall/unpackerr/images/unpackerr-logo-text.png",
+        "image": "hotio/unpackerr:release",
+        "categories": [
+            "media"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "volumes": [
+            {
+                "container": "/data/torrents",
+                "bind": "!torrents"
+            },
+            {
+                "container": "/config",
+                "bind": "!dockerdir/unpackerr"
+            }
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            }
+        ]
+    }
+]
