@@ -2,7 +2,7 @@
     {
         "type": 1,
         "title": "Unpackerr",
-        "name": "airsonic",
+        "name": "unpackerr",
         "description": "This application runs as a daemon on your download host. It checks for completed downloads and extracts them so Radarr, Lidarr, Sonarr, and Readarr may import them.",
         "logo": "https://raw.githubusercontent.com/wiki/davidnewhall/unpackerr/images/unpackerr-logo-text.png",
         "image": "hotio/unpackerr:release",
